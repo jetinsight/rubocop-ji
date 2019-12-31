@@ -1,7 +1,7 @@
 module RuboCop
   module Cop
     module Style
-      class DirectEnvAccess < Cop
+      class JICop < Cop
         MSG = 'Prefer EnvironmentAccessor.get to direct ENV access'.freeze
         def_node_matcher :not_empty_call?, <<~PATTERN
           (const nil :ENV)
