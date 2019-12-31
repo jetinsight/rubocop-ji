@@ -1,4 +1,5 @@
 require "rubocop/ji/version"
+require 'yaml'
 
 module RuboCop
   module Ji
