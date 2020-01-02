@@ -1,13 +1,16 @@
 module RuboCop
   module Cop
     module Style
-      class JICop < Cop
-        MSG = 'Prefer EnvironmentAccessor.get to direct ENV access'.freeze
-        def_node_matcher :not_empty_call?, <<~PATTERN
-          (const nil :ENV)
+      class DirectEnvAccess < Cop
+        MSG = 'Use `EnvironmentHelper.get` instead of `ENV`.'
+
+        def_node_matcher :bad_method?, <<~PATTERN
+          (const nil? :ENV ...)
         PATTERN
+
         def on_send(node)
-          return unless not_empty_call? node
+          return unless bad_method?(node)
+
           add_offense(node)
         end
       end
