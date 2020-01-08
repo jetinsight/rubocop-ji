@@ -9,6 +9,7 @@ module RuboCop
         PATTERN
 
         def on_send(node)
+
           return unless bad_method?(node)
 
           add_offense(node)
