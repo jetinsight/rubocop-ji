@@ -5,7 +5,7 @@ module RuboCop
         MSG = 'Use `EnvironmentHelper.get` instead of `ENV`.'
 
         def_node_matcher :bad_method?, <<~PATTERN
-          (send (const nil? :ENV) _ (str _))
+          (send (const ... :ENV) ...)
         PATTERN
 
         def on_send(node)
