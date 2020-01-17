@@ -1,8 +1,6 @@
 # Rubocop::Ji
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rubocop/ji`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This collection of cops is responsible for maintaining and enforcing Jet Insight specific coding practices and standardizations. 
 
 ## Installation
 
@@ -22,7 +20,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Cops available
+- Style/DirectEnvAccess : will check for ENV usesages and force you to use the helper methods provided. 
 
 ## Development
 
