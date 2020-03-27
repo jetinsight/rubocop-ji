@@ -2,7 +2,7 @@ module RuboCop
   module Cop
     module Style
       class DirectEnvAccess < Cop
-        MSG = 'Use `EnvironmentHelper.get` instead of `ENV`.'
+        MSG = 'Use `EnvAccess` instead of `ENV` to access or check environment variables.'
 
         def_node_matcher :bad_method?, <<~PATTERN
           (send (const ... :ENV) ...)
